@@ -11,6 +11,8 @@ public class Car {
     private int year;
     private String color;
     private int mileage;
+    private Person owner;
+
 
     /*public Car(){
         this.vin = null;
@@ -50,6 +52,10 @@ public class Car {
         return year;
     }
 
+    public String getOwnerInfo() {
+        return owner.getPersonInfo();
+    }
+
     public void setBrand(String brand) { // Volvo
         if (brand == null || brand.trim().isEmpty())
             throw new IllegalArgumentException("Brand should not be null or empty.");
@@ -84,6 +90,10 @@ public class Car {
         }
     }
 
+    public void setOwner(Person owner) {
+        this.owner = owner;
+    }
+
     public String getCarInfo() {
         StringBuilder sb = new StringBuilder();
         sb.append("Car Info -> ")
@@ -92,6 +102,11 @@ public class Car {
                 .append(", Model ").append(model)
                 .append(", Year ").append(year)
                 .append(", Mileage ").append(mileage);
+        if (owner != null){
+            sb.append(", Owner: ").append(owner.getPersonInfo());
+        } else {
+            sb.append(", No owner assigned.");
+        }
         return sb.toString();
     }
 
