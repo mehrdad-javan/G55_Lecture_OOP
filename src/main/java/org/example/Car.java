@@ -5,6 +5,7 @@ import java.util.UUID;
 
 public class Car {
 
+    // Fields
     private final String vin;
     private String brand;
     private String model;
@@ -14,6 +15,7 @@ public class Car {
     private Person owner;
 
 
+    // Constructors
     /*public Car(){
         this.vin = null;
         this.brand = null;
@@ -35,7 +37,7 @@ public class Car {
     }
 
 
-    // getters and setters
+    // getters and setters + other methods
     public String getVin() {
         return vin; // it returns the read only value of vin
     }
