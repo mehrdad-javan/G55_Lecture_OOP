@@ -1,0 +1,15 @@
+package org.example;
+
+public interface IOrderItem {
+
+    int MAX_ITEMS = 10;
+
+    void addItem(FoodItem foodItem);
+    void removeItem(FoodItem foodItem);
+    FoodItem[] getItems();
+    double calculateTotalPrice();
+    void displayItems();
+
+    // default & static methods
+
+}
