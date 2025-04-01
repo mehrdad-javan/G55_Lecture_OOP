@@ -1,6 +1,6 @@
 package org.example;
 
-public class Burger extends FoodItem {
+public final class Burger extends FoodItem {
 
     private String type; // Type of burger (beef, chicken and...)
     private boolean hasCheese;
@@ -15,10 +15,17 @@ public class Burger extends FoodItem {
     }
 
     @Override
-    public String getDescription(){
+    public String getDescription() {
         return super.getDescription() + " , Type: " + type;
     }
 
+    @Override
+    public double calculateTax() {
+        return getPrice() * 0.1;
+    }
 
-
+    @Override
+    public String toString() {
+        return "Name: " + getName() + ", Price: " + getPrice() + ", HasCheese: " + hasCheese + ", Type: " + type;
+    }
 }

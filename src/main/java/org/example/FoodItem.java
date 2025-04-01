@@ -1,6 +1,6 @@
 package org.example;
 
-public class FoodItem {
+public abstract class FoodItem {
     private String name;
     private double price;
 
@@ -20,4 +20,7 @@ public class FoodItem {
     public String getDescription() {
         return "Item: " + name + " , Price: " + price;
     }
+
+    public abstract double calculateTax();
+
 }
